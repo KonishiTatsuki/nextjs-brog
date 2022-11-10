@@ -4,14 +4,16 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Your Name';
+const name = 'Konishi Tatsuki';
 export const siteTitle = 'Next.js Sample Website';
 
+// index.jsのchildrenを引数に持ってきている
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        {/* metaの部分で何を行っているのか理解できていない */}
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
