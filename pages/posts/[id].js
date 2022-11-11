@@ -1,7 +1,7 @@
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
-export default function Post({ postData }) {
+export default function Post({ postData }) {  //ブログを開いた際の表示
   return (
     <Layout>
       {postData.title}
@@ -13,11 +13,11 @@ export default function Post({ postData }) {
   );
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths() { //パスを生成
   const paths = getAllPostIds();
   return {
     paths,
-    fallback: false,
+    fallback: false,  //ページが見つからなかったら404のエラーページを表示する
   };
 }
 
